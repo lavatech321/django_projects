@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	{% if target_drink_list|random == user_drink %}
+		Congratulations your drink just got selected!
+	{% else %}
+		Oops, Luck not working
+	{% endif %}
+
+</body>
+</html>

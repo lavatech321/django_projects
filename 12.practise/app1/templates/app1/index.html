@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page1</title>
+</head>
+<body>
+
+	<b>Today is - {% now "jS F Y H:i"  %}</b>
+	<p>It is {% now "SHORT_DATETIME_FORMAT" %}</p>
+
+	{% now "Y" as current_year %}
+	<p>Current year is - {{ current_year }}</p>
+	
+	{% if current_year == '2020' %}
+		<p>Welcome to New Year</p>
+	{% else %}
+		<p>Not a New Year</p>
+	{% endif %}
+
+</body>
+</html>

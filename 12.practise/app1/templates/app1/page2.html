@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	{% if username %}
+		<p>Welcome {{ username }}</p>
+	{% endif %}
+
+
+	{% if username %}
+		<p>Welcome {{ username }}</p>
+	{% else %}
+		<p>User have not logged in!</p>
+	{% endif %}
+
+
+	{% if username %}
+		<p>Welcome {{ username }}</p>
+	{% elif email %}
+		<p>Welcome {{ email }}</p>
+	{% else %}
+		<p>User have not logged in!</p>
+	{% endif %}
+
+</body>
+</html>

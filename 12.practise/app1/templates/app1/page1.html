@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<form method='post'>
+	{% csrf_token %}
+		Enter your name: <input type="text" name="name" values='enter your name'>
+		<button type='submit'>Submit</button>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+<html>
+<body>
+	<center><h1>Welcome to Our Website {{ location }}</h1></center>
+	<a href="{% url 'home' page=500 %}">Home</a> /
+	<a href="{% url 'signup' name='lavatech' mail='lavatech@gmail.com' %}">SignUp</a>
+	<hr>
+	<h2>This is Home Page! This is {{ city }}</h2>
+	<h2>This is Page {{ page }}</h2>
+</body>
+</html>
+
+

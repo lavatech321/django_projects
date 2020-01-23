@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<ul>
+		{% for x in target_drink_list %}
+			<li>{{ x }}</li>
+		{% empty %}
+			<li>No drinks!</li>
+		{% endfor %}
+	</ul>
+
+	<ul>
+		{% for x in drinks %}
+			<li>{{ x }}</li>
+		{% empty %}
+			<li>No drinks!</li>
+		{% endfor %}
+	</ul>
+
+	<ul>
+		{% for x,y in store.items %}
+			<li><a href="/{{ x }}/">{{ y }}</a></li>
+		{% endfor %}
+	</ul>	
+
+
+</body>
+</html>
