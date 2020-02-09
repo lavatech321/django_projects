@@ -73,6 +73,7 @@ class Customer(models.Model):
     for no,field_name in enumerate(self._meta.get_fields()):
       if int(no) == 0:
         last = str(field_name).split('.')[-1][:-1]
+        self.order_set.all()
       else:
         last = str(field_name).split('.')[-1]
       value = getattr(self, last, None)
@@ -134,8 +135,50 @@ class Tution(models.Model):
  
  #####  End of ManyToMany Example ##########
 
+#####  Start of Understanding Fields Type Example ##########
+
+class Test(models.Model):
+  no1 = models.IntegerField()
+  no2 = models.BigIntegerField()
+  no3 = models.FloatField()
+  choice = models.BooleanField()
+  name = models.CharField(max_length=30)
+  address = models.TextField()
+  date = models.DateField(auto_now_add=True)
+  mail = models.EmailField()
+
+  def __str__(self):
+    return 'id => {}'.format(self.id)
+
+  def __iter__(self):
+    for field_name in self._meta.get_fields():
+      last = str(field_name).split('.')[-1]
+      value = getattr(self, last, None)
+      yield (field_name, value)
+ 
+#####  End of Understanding Fields Type Example ##########
 
 
+#####  Start of Understanding Fields Options Example ##########
 
+from phonenumber_field.modelfields import PhoneNumberField
 
+class Test2(models.Model):
+  no1 = models.IntegerField(primary_key=True)
+  name = models.CharField(max_length=30, blank=True)
+  address = models.TextField(help_text='Enter address',unique=True)
+  date = models.DateField(auto_now_add=True)
+  mail = models.EmailField(null=True)
+  phone_number = PhoneNumberField()
+
+  def __str__(self):
+    return 'id => {}'.format(self.no1)
+
+  def __iter__(self):
+    for field_name in self._meta.get_fields():
+      last = str(field_name).split('.')[-1]
+      value = getattr(self, last, None)
+      yield (field_name, value)
+ 
+#####  End of Understanding Fields Options Example ##########
 

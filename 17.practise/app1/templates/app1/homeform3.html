@@ -1,0 +1,18 @@
+{% extends 'base_admin.html' %}
+
+{% block title %}
+    {{ block.super }}
+{% endblock %}
+ 
+ <!-- Begin page content -->
+{% block main %}   
+    <main role="main" class="container">
+    
+    <form>
+      {% csrf_token %}
+       {{ form.as_ul }}
+	  <button type="submit" class="btn btn-primary">Sign in</button>
+	</form>
+    </main>
+{% endblock %}
+<!-- Begin page content -->

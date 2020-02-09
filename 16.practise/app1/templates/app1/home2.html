@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page1</title>
+</head>
+<body>
+	<form method='post' novalidate>
+		{% csrf_token %}
+		{{ form }}
+		<br>
+		<hr>
+		{{form.as_table}}
+		<br>
+		<hr>
+		{{form.as_ul}}
+		<br>
+		<hr>
+		{{form.as_p}}
+		<br>
+		<hr>
+	</form>
+
+	<table border='1'>
+		{{form}}
+	</table>
+</body>
+</html>

@@ -1,0 +1,34 @@
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link href="{% static 'css/sticky-footer-navbar.css' %}" rel="stylesheet">
+
+  <title>{% block title %}The Great Django Blog :: Admin Panel{% endblock %}</title>
+  <style type="text/css">
+    .asteriskField {
+      display: none;
+    }
+  </style>
+  </head>
+  <body>
+  
+  {% block content %}
+	{% endblock %}
+
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Welcome to LavaTech Technology Django Apps!.</span>
+      </div>
+    </footer>
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  </body>
+</html>
