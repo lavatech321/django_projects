@@ -12,4 +12,3 @@ urlpatterns = [
     path('homeform6/', views.homeform6 , name='homeform6'),
     path('homeform7/', views.homeform7 , name='homeform7'),
 ]
-

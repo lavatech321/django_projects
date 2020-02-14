@@ -143,8 +143,4 @@ class DetailForm3(forms.ModelForm):
         return self.cleaned_data['confirm_password']
 
    
-               
-
-
-
-    
+            

@@ -1,0 +1,27 @@
+{% extends 'base_admin.html' %}
+
+{% block title %}
+    {{ block.super }}
+{% endblock %}
+ 
+ <!-- Begin page content -->
+{% block main %}   
+    <main role="main" class="container">
+		<div class="jumbotron">
+  			<h1>Welcome To Lavatech Technology</h1>
+  			<p>Grow with Experienced!</p>
+		</div>    
+
+		<div>
+			<h3>Total Users:{{ count }}</h3>
+			<p>Welcome to our website, 
+					{% if user.is_authenticated %}
+						{{ user.username }}
+					{% else %}
+						please login to continue
+					{% endif %}
+			</p>
+		</div>
+    </main>
+{% endblock %}
+<!-- Begin page content -->
