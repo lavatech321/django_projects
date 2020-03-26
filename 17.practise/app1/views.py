@@ -25,6 +25,7 @@ def homeform5(requests):
 	f1 = DetailForm2()
 	return render(requests,'app1/homeform5.html',{ 'form':f1 })
 
+
 def homeform6(requests):
 	if requests.method == 'POST':
 		f1 = DetailForm2(requests.POST)
@@ -37,6 +38,19 @@ def homeform6(requests):
 	else:
 		f1 = DetailForm2()
 	return render(requests,'app1/homeform6.html',{ 'form':f1 })
+
+def homeform6_6(requests):
+	if requests.method == 'POST':
+		f1 = DetailForm2(requests.POST)
+
+		if f1.is_valid():
+			f1.save()
+			return redirect('homeform6_6')
+		else:
+			print(f1.errors)
+	else:
+		f1 = DetailForm2()
+	return render(requests,'app1/homeform6_6.html',{ 'form':f1 })
 
 
 def homeform7(requests):
@@ -51,5 +65,21 @@ def homeform7(requests):
 	else:
 		f1 = DetailForm3()
 	return render(requests,'app1/homeform7.html',{ 'form':f1 })
+
+
+def homeform8(requests):
+	if requests.method == 'POST':
+		f1 = DetailForm3(requests.POST)
+
+		if f1.is_valid():
+			f1.save()
+			return redirect('homeform8')
+		else:
+			print(f1.errors)
+	else:
+		f1 = DetailForm3()
+	return render(requests,'app1/homeform8.html',{ 'form':f1 })
+
+
 
 # Create your views here.

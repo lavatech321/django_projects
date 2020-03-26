@@ -73,7 +73,6 @@ class Customer(models.Model):
     for no,field_name in enumerate(self._meta.get_fields()):
       if int(no) == 0:
         last = str(field_name).split('.')[-1][:-1]
-        self.order_set.all()
       else:
         last = str(field_name).split('.')[-1]
       value = getattr(self, last, None)

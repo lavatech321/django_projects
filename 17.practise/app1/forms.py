@@ -34,7 +34,7 @@ class DetailForm2(forms.ModelForm):
             'password': forms.PasswordInput(
                 attrs={ 'class':"form-control" , 'id':"inputPassword4" , 'placeholder':"Password"}),
             'confirm_password': forms.PasswordInput(
-                attrs={ 'class':"form-control" , 'id':"confirm_inputPassword4"}),
+                attrs={ 'class':"form-control" , 'id':"confirm_inputPassword4" , 'placeholder':"Confirm Password"}),
             'phone_number': forms.TextInput(
                 attrs={ 'class':"form-control" , 'id':"phno" , 'placeholder':"Phone Number" , }),  
             'address1': forms.TextInput(
@@ -73,9 +73,9 @@ class DetailForm3(forms.ModelForm):
             'email': forms.EmailInput(
                 attrs={ 'class':"form-control" , 'id':"inputEmail4" , 'placeholder':"Email"}),
             'password': forms.PasswordInput(
-                attrs={ 'class':"form-control" , 'id':"inputPassword4"}),
+                attrs={ 'class':"form-control" , 'id':"inputPassword4" , 'placeholder':"Password"}),
             'confirm_password': forms.PasswordInput(
-                attrs={ 'class':"form-control" , 'id':"confirm_inputPassword4"}),
+                attrs={ 'class':"form-control" , 'id':"confirm_inputPassword4" , 'placeholder':"Confirm Password"}),
             'phone_number': forms.TextInput(
                 attrs={ 'class':"form-control" , 'id':"phno" , 'placeholder':"Phone Number" , }),  
             'address1': forms.TextInput(
